@@ -21,8 +21,8 @@ import torchtext
 import pickle
 
 from torchtext.vocab import Vectors
-from appv1.bert import BertTokenizer, load_vocab
-from appv1.config import PKL_FILE, VOCAB_FILE, DATA_PATH
+from utils.bert import BertTokenizer, load_vocab
+from utils.config import PKL_FILE, VOCAB_FILE, DATA_PATH
 
 
 def get_chABSA_DataLoaders_and_TEXT(max_length=256, batch_size=32):
