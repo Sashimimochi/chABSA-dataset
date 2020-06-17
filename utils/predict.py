@@ -4,8 +4,8 @@ import string
 import torch
 import torchtext
 import pickle
-from appv1.bert import get_config, load_vocab, BertModel, BertTokenizer, BertForchABSA, set_learned_params
-from appv1.config import *
+from utils.bert import get_config, load_vocab, BertModel, BertTokenizer, BertForchABSA, set_learned_params
+from utils.config import *
 
 
 def pickle_dump(TEXT, path):
