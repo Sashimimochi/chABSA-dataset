@@ -715,7 +715,7 @@ class BertTokenizer(object):
         self.juman_tokenizer = JumanTokenize()
 
 
-    def tokenize(self, text):
+    def tokenize(self, text, verbose=False):
         '''文章を単語に分割する関数'''
         split_tokens = []  # 分割後の単語たち
         for token in self.basic_tokenizer.tokenize(text):
@@ -724,7 +724,8 @@ class BertTokenizer(object):
                     split_tokens.append(sub_token)
                 else:
                     split_tokens.append("[UNK]")
-        print(split_tokens)
+        if verbose:
+            print(split_tokens)
         return split_tokens    
     
     def convert_tokens_to_ids(self, tokens):
